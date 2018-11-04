@@ -29,7 +29,9 @@
           <br>
           <vs-row vs-type="flex" vs-justify="center">
             <vs-col vs-type="flex" vs-justify="center" vs-align="center">
-              <vs-button class="catalog-button" color="#663695" gradient-color-secondary="#8F5FBF" type="gradient">VIEW CATALOG</vs-button>
+              <vs-button class="catalog-button" color="#663695" gradient-color-secondary="#8F5FBF" type="gradient" to="shop">
+                VIEW CATALOG
+              </vs-button>
             </vs-col>
           </vs-row>
         </div>
