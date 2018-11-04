@@ -29,10 +29,11 @@
         <h2>The 5 Great Pharoahs (the order doesn't change their Pharaoism)</h2>
         <vs-avatar size="70px" src="https://avatars3.githubusercontent.com/u/20306697?s=460&v=4" /> <a href="http://github.com/odm235" target="_blank" rel="noopener noreferrer">Pwii</a> - Big time piloneer
         <vs-avatar size="70px" src="https://avatars0.githubusercontent.com/u/39972411?s=460&v=4" /><a href="http://github.com/ChrisSMendoza" target="_blank" rel="noopener noreferrer">ChrisCodes</a> - the Clarifaier
-        <vs-avatar size="70px" src="https://avatars3.githubusercontent.com/u/20648461?s=460&v=4" /><a href="http://github.com/ChrisSMendoza" target="_blank" rel="noopener noreferrer">dSkilly</a> - StackOverOverOverFlow
+        <vs-avatar size="70px" src="https://avatars3.githubusercontent.com/u/20648461?s=460&v=4" /><a href="http://github.com/ChrisSMendoza" target="_blank" rel="noopener noreferrer">dSkilly</a> - StackOverOverFlow
         <vs-avatar size="70px" src="https://avatars0.githubusercontent.com/u/39972411?s=460&v=4" /><a href="http://github.com/bkwillia052" target="_blank" rel="noopener noreferrer">BKWillia</a> - Gatsboy
         <vs-avatar size="70px" src="https://avatars3.githubusercontent.com/u/26802924?s=460&v=4" /><a href="http://github.com/blurdylan" target="_blank" rel="noopener noreferrer">DylanBlur</a> - Clutch
-      </div>
+      </div><br><br>
+      <small style="text-align: center">We shall always pray ( 1 ) for it to merge peacefully 🙏🏾🙏🏾🙏🏾</small>
     </div>
   </div>
 </template>
