@@ -14,7 +14,7 @@
       </vs-row>
 
       <!-- rows of apparel items -->
-      <vs-row vs-justify="space-around" vs-align="center" vs-w="12"
+      <vs-row vs-justify="flex-start" vs-align="center" vs-w="12"
         type="flex" class="product-list ph-overflow-scroll">
         
         <vs-col 
