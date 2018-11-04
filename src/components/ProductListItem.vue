@@ -7,7 +7,7 @@
     </div>
 
     <div slot="media">
-      <img :src="productData.long_sec" class="product-item-img">
+      <img :src="productData.long_desc" class="product-item-img">
     </div>
 
     <div slot="footer">
