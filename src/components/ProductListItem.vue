@@ -7,7 +7,7 @@
     </div>
 
     <div slot="media">
-      <img src="https://www.theartofshaving.com/dw/image/v2/AADV_PRD/on/demandware.static/-/Sites-taos-master-catalog/default/v1530590471076/images/productimages/00670535725015.png?sw=490&sh=490" class="product-item-img">
+      <img :src="productData.long_sec" class="product-item-img">
     </div>
 
     <div slot="footer">
