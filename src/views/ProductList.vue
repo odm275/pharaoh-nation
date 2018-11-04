@@ -18,7 +18,7 @@
         type="flex" class="product-list ph-overflow-scroll">
         
         <vs-col 
-          v-for="product,index in catalogItems"
+          v-for="product,index in products"
           :key="index"
 
           type="flex"
@@ -53,51 +53,7 @@ export default {
   },
   data() {
     return {
-      products: [],
-      catalogItems: [
-        {
-          name: "Versace",
-          short_desc: "$300",
-          imgSrc: "black_dress.png",
-          id: 1
-        },
-        {
-          name: "Supreme",
-          short_desc: "$60",
-          imgSrc: "suit.jpg",
-          id: 2
-        },
-        {
-          name: "Gucci Belt",
-          short_desc: "$150",
-          imgSrc: "tan_w_hat.png",
-          id: 3
-        },
-        {
-          name: "Hanes Tee",
-          short_desc: "$10",
-          imgSrc: "white_sweater.jpeg",
-          id: 4
-        },
-        {
-          name: "Janowski",
-          short_desc: "$55",
-          imgSrc: "pink_dress.png",
-          id: 5
-        },
-        {
-          name: "Versace",
-          short_desc: "$300",
-          imgSrc: "black_dress.png",
-          id: 6
-        },
-        {
-          name: "Supreme",
-          short_desc: "$60",
-          imgSrc: "suit.jpg",
-          id: 7
-        },
-      ]
+      products: []
     };
   },
   computed: {},
