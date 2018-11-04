@@ -5,16 +5,11 @@
 
       <!-- rows of apparel items -->
       <vs-row vs-justify="flex-start" vs-align="center" vs-w="12" type="flex" class="product-list ph-overflow-scroll">
-
         <vs-col v-for="product in products" :key="product.id" type="flex" vs-xs="12" vs-sm="5" vs-lg="4" class="product-col">
-
           <ProductListItem v-bind:key="product.id" v-bind:productData="product">
           </ProductListItem>
-
         </vs-col>
-
       </vs-row>
-
     </main>
   </div>
 
