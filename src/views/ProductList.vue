@@ -1,35 +1,14 @@
 <template>
-
+  <div>
+    <Header />
     <main class="ph-h-section-first">
-  
-      <!-- catalog header -->
-      <vs-row vs-justify="center" vs-align="center" vs-w="12">
-
-        <!-- logo, company name, section name -->
-        <vs-col class="ph-text-center " vs-w="4" vs-xs="12">
-          <h1>Apparel Pharaoh</h1>
-          <h4>Catalog</h4>
-        </vs-col>
-
-      </vs-row>
 
       <!-- rows of apparel items -->
-      <vs-row vs-justify="flex-start" vs-align="center" vs-w="12"
-        type="flex" class="product-list ph-overflow-scroll">
-        
-        <vs-col 
-          v-for="product,index in products"
-          :key="index"
+      <vs-row vs-justify="flex-start" vs-align="center" vs-w="12" type="flex" class="product-list ph-overflow-scroll">
 
-          type="flex"
-          vs-xs="12" vs-sm="5" vs-lg="4"
+        <vs-col v-for="product in products" :key="product.id" type="flex" vs-xs="12" vs-sm="5" vs-lg="4" class="product-col">
 
-          class="product-col"
-        >
-
-          <ProductListItem 
-            v-bind:key="product.id"
-            v-bind:productData="product">
+          <ProductListItem v-bind:key="product.id" v-bind:productData="product">
           </ProductListItem>
 
         </vs-col>
@@ -37,6 +16,7 @@
       </vs-row>
 
     </main>
+  </div>
 
 </template>
 
@@ -53,7 +33,7 @@ export default {
   },
   data() {
     return {
-      products: []
+      products: [],
     };
   },
   computed: {},
@@ -83,7 +63,7 @@ export default {
 
 <style>
 .product-list {
-  height: 80vh;
+  height: 70vh;
 }
 .product-col {
   padding: 15px;
@@ -106,10 +86,10 @@ export default {
 }
 
 .ph-text-center {
-    text-align: center;
+  text-align: center;
 }
 .ph-mt-2 {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .ph-ms-2 {
