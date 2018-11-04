@@ -1,42 +1,31 @@
 <template>
 
-    <main class="ph-h-section-first">
-  
-      <!-- catalog header -->
-      <vs-row vs-justify="center" vs-align="center" vs-w="12">
+  <main class="ph-h-section-first">
 
-        <!-- logo, company name, section name -->
-        <vs-col class="ph-text-center " vs-w="4" vs-xs="12">
-          <h1>Apparel Pharaoh</h1>
-          <h4>Catalog</h4>
-        </vs-col>
+    <!-- catalog header -->
+    <vs-row vs-justify="center" vs-align="center" vs-w="12">
 
-      </vs-row>
+      <!-- logo, company name, section name -->
+      <vs-col class="ph-text-center " vs-w="4" vs-xs="12">
+        <h1>Apparel Pharaoh</h1>
+        <h4>Catalog</h4>
+      </vs-col>
 
-      <!-- rows of apparel items -->
-      <vs-row vs-justify="flex-start" vs-align="center" vs-w="12"
-        type="flex" class="product-list ph-overflow-scroll">
-        
-        <vs-col 
-          v-for="product,index in products"
-          :key="index"
+    </vs-row>
 
-          type="flex"
-          vs-xs="12" vs-sm="5" vs-lg="4"
+    <!-- rows of apparel items -->
+    <vs-row vs-justify="flex-start" vs-align="center" vs-w="12" type="flex" class="product-list ph-overflow-scroll">
 
-          class="product-col"
-        >
+      <vs-col v-for="product in products" :key="product.id" type="flex" vs-xs="12" vs-sm="5" vs-lg="4" class="product-col">
 
-          <ProductListItem 
-            v-bind:key="product.id"
-            v-bind:productData="product">
-          </ProductListItem>
+        <ProductListItem v-bind:key="product.id" v-bind:productData="product">
+        </ProductListItem>
+        <span v-for="concept in product.imagePrediction" :key="concept.id">{{concept.name}}</span>
+      </vs-col>
 
-        </vs-col>
+    </vs-row>
 
-      </vs-row>
-
-    </main>
+  </main>
 
 </template>
 
@@ -44,6 +33,7 @@
 import Header from '@/components/Header.vue';
 import ProductListItem from '@/components/ProductListItem.vue';
 import config from '../config';
+import clarifai from 'clarifai';
 
 export default {
   name: 'ProductList',
@@ -53,10 +43,14 @@ export default {
   },
   data() {
     return {
-      products: []
+      products: [],
     };
   },
   computed: {},
+  created() {
+    this.app = new Clarifai.App({ apiKey: '359480b570054322b902c0b9f3978ac4' });
+  },
+
   mounted() {
     // Get a public token
     config.pilonApi
@@ -75,6 +69,16 @@ export default {
           .then(res => {
             console.log(res.data);
             this.products = res.data;
+            const images = res.data.map(data => data.long_desc);
+
+            this.app.models.predict(Clarifai.APPAREL_MODEL, images).then(x => {
+              const data = x.outputs;
+              console.log(data);
+              for (let i = 0; i < data.length; i++) {
+                this.products[i].imagePrediction = data[i].data.concepts;
+              }
+              console.log(this.products);
+            });
           });
       });
   },
@@ -106,7 +110,7 @@ export default {
 }
 
 .ph-text-center {
-    text-align: center;
+  text-align: center;
 }
 .ph-mt-2 {
   margin-top: 20px;
