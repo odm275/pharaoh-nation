@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Nav :useSticky="useStickyNav"/>
+    <Nav :useSticky="useStickyNav" />
     <div class="container">
       <div class="hero-box">
         <h1>Shop Facial Hair.<br>We've got your beard covered.</h1>
@@ -8,9 +8,7 @@
         <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
       </div>
     </div>
-    <div
-        id="waypoint-1"
-        v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+    <div id="waypoint-1" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
     </div>
   </header>
 </template>

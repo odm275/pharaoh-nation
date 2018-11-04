@@ -1,41 +1,31 @@
-<template>
+
+  <template>
   <div id="login">
-    <Header/>
-    <div class="register-form">
+    <Header />
+
+    <div class="login-form">
+      <h2 class="title">Ready to Get Pharaoed?</h2>
       <form @submit.prevent="onSubmit">
         <div class="input">
-          <label for="firstName">First Name</label>
-          <input
-              type="text"
-              id="firstName"
-              v-model="firstName">
+          <vs-input size="large" label="First Name" placeholder="Amenhotep" v-model="firstName" />
         </div>
         <div class="input">
-          <label for="lastName">Last Name</label>
-          <input
-              type="text"
-              id="lastName"
-              v-model="lastName">
+          <vs-input size="large" label="Last Name" placeholder="IV" v-model="lastName" />
         </div>
         <div class="input">
-          <label for="email">Email</label>
-          <input
-              type="email"
-              id="email"
-              v-model="email">
+          <vs-input size="large" label="Email" placeholder="pharaoh@pyramid.com" v-model="email" />
         </div>
         <div class="input">
-          <label for="password">Password</label>
-          <input
-              type="password"
-              id="password"
-              v-model="password">
+          <vs-input size="large" label="Password" placeholder="" v-model="password" />
         </div>
         <div class="submit">
-          <button type="submit">Submit</button>
+          <vs-button color="#663695" type="relief">REGISTER</vs-button>
+          <br>
+          <vs-button to="/login" line-origin="left" color="warning" type="line">I already have an account yet! Login</vs-button>
         </div>
       </form>
     </div>
+
   </div>
 </template>
 
@@ -69,58 +59,34 @@ export default {
 </script>
 
 <style scoped>
-.register-form {
-  width: 400px;
+.login-form {
+  width: 500px;
   margin: 100px auto 40px;
   border: 1px solid #eee;
   padding: 20px;
   box-shadow: 0 2px 3px #ccc;
+  border-radius: 15px;
 }
 
-.input {
-  margin: 10px auto;
-}
-
-.input label {
-  display: block;
-  color: #4e4e4e;
-  margin-bottom: 6px;
-}
-
-.input input {
-  font: inherit;
+.vs-button {
+  font-family: 'Fira Sans', sans-serif !important;
+  font-weight: 600;
+  font-size: 15px !important;
+  margin-top: 10px;
   width: 100%;
-  padding: 6px 12px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
+  padding: 20px 100px;
 }
 
-.input input:focus {
-  outline: none;
-  border: 1px solid #521751;
-  background-color: #eee;
+.title {
+  text-align: center;
 }
 
-.submit button {
-  border: 1px solid #521751;
-  color: #521751;
-  padding: 10px 20px;
-  font: inherit;
-  cursor: pointer;
+.vs-input {
+  width: 100%;
+  font-size: 35px !important;
 }
 
-.submit button:hover,
-.submit button:active {
-  background-color: #521751;
-  color: white;
-}
-
-.submit button[disabled],
-.submit button[disabled]:hover,
-.submit button[disabled]:active {
-  border: 1px solid #ccc;
-  background-color: transparent;
-  color: #ccc;
-  cursor: not-allowed;
+.label {
+  font-size: 35px !important;
 }
 </style>

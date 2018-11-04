@@ -2,15 +2,24 @@
   <nav v-bind:class="{ sticky: useSticky }">
     <div class="container">
       <router-link to="/">
-        <img src="../assets/fh_white_188_188.png" alt="FH Logo" class="logo">
-        <img src="../assets/fh_black_310_310.png" alt="FH Logo" class="logo-black">
+        <img src="../assets/header-logo.svg" alt="AP Logo" class="logo-black">
       </router-link>
       <ul class="main-nav js--main-nav">
-        <li><router-link to="/shop">Shop</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/my-account">My Account</router-link></li>
-        <li v-if="!isAuthenticated"><router-link to="/login">Login</router-link></li>
-        <li v-if="!isAuthenticated"><router-link to="/register">Register</router-link></li>
+        <li>
+        </li>
+        <li>
+          <router-link to="/shop">Shop</router-link>
+        </li>
+        <li>
+          <router-link to="/about">About</router-link>
+        </li>
+
+        <li v-if="!isAuthenticated">
+          <router-link to="/login">Login</router-link>
+        </li>
+        <li v-if="!isAuthenticated">
+          <router-link to="/register">Register</router-link>
+        </li>
         <li v-if="isAuthenticated"><a href="#" @click="onLogout">Logout</a></li>
       </ul>
       <a class="mobile-nav-icon js--nav-icon"><i class="fas fa-bars"></i></a>
@@ -86,7 +95,7 @@ export default {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-  border-bottom: 2px solid #b77d64;
+  border-bottom: 2px solid #663695;
 }
 
 .sticky {
@@ -106,7 +115,7 @@ export default {
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
   padding: 16px 0;
-  color: #555;
+  color: #663695;
 }
 
 .sticky .logo {

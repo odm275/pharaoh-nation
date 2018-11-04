@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
-    <SignUpBar/>
-    <Footer/>
+    <router-view />
   </div>
 </template>
 
@@ -25,7 +23,7 @@ export default {
 <style lang="scss">
 body {
   margin: 0 0;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Fira Sans', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /*color: #2c3e50;*/
