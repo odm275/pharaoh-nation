@@ -15,20 +15,19 @@
 
       <!-- rows of apparel items -->
       <vs-row vs-justify="space-around" vs-align="center" vs-w="12"
-        type="flex" class="ph-overflow-scroll">
+        type="flex" class="product-list ph-overflow-scroll">
         
         <vs-col 
-          v-for="item,index in catalogItems"
+          v-for="product,index in catalogItems"
           :key="index"
 
           type="flex"
           vs-xs="12" vs-sm="5" vs-lg="4"
 
-          class="catalog-col"
+          class="product-col"
         >
 
           <ProductListItem 
-            v-for="product in products"
             v-bind:key="product.id"
             v-bind:productData="product">
           </ProductListItem>
@@ -58,29 +57,46 @@ export default {
       catalogItems: [
         {
           name: "Versace",
-          price: "$300",
-          imgSrc: "black_dress.png"
+          short_desc: "$300",
+          imgSrc: "black_dress.png",
+          id: 1
         },
         {
           name: "Supreme",
-          price: "$60",
-          imgSrc: "suit.jpg"
+          short_desc: "$60",
+          imgSrc: "suit.jpg",
+          id: 2
         },
         {
           name: "Gucci Belt",
-          price: "$150",
-          imgSrc: "tan_w_hat.png"
+          short_desc: "$150",
+          imgSrc: "tan_w_hat.png",
+          id: 3
         },
         {
           name: "Hanes Tee",
-          price: "$10",
-          imgSrc: "white_sweater.jpeg"
+          short_desc: "$10",
+          imgSrc: "white_sweater.jpeg",
+          id: 4
         },
         {
           name: "Janowski",
-          price: "$55",
-          imgSrc: "pink_dress.png"
-        }
+          short_desc: "$55",
+          imgSrc: "pink_dress.png",
+          id: 5
+        },
+        {
+          name: "Versace",
+          short_desc: "$300",
+          imgSrc: "black_dress.png",
+          id: 6
+        },
+        {
+          name: "Supreme",
+          short_desc: "$60",
+          imgSrc: "suit.jpg",
+          id: 7
+        },
       ]
     };
   },
@@ -110,14 +126,10 @@ export default {
 </script>
 
 <style>
-.product-list-content {
-  margin-top: 80px;
-  min-height: 360px;
+.product-list {
+  height: 80vh;
 }
-.product-list-items {
-  display: flex;
-}
-.catalog-col {
+.product-col {
   padding: 15px;
   height: 40vh;
 }
