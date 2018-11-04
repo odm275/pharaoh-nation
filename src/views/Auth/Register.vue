@@ -7,19 +7,19 @@
       <h2 class="title">Ready to Get Pharaoed?</h2>
       <form @submit.prevent="onSubmit">
         <div class="input">
-          <vs-input size="large" label="First Name" placeholder="Amenhotep" v-model="firstName" />
+          <vs-input size="large" type="text" label="First Name" placeholder="Amenhotep" v-model="firstName" />
         </div>
         <div class="input">
-          <vs-input size="large" label="Last Name" placeholder="IV" v-model="lastName" />
+          <vs-input size="large" type="text" label="Last Name" placeholder="IV" v-model="lastName" />
         </div>
         <div class="input">
-          <vs-input size="large" label="Email" placeholder="pharaoh@pyramid.com" v-model="email" />
+          <vs-input size="large" type="email" label="Email" placeholder="pharaoh@pyramid.com" v-model="email" />
         </div>
         <div class="input">
-          <vs-input size="large" label="Password" placeholder="" v-model="password" />
+          <vs-input size="large" type="password" label="Password" placeholder="" v-model="password" />
         </div>
         <div class="submit">
-          <vs-button color="#663695" type="relief">REGISTER</vs-button>
+          <vs-button color="#663695" type="relief" v-on:click="submit">REGISTER</vs-button>
           <br>
           <vs-button to="/login" line-origin="left" color="warning" type="line">I already have an account yet! Login</vs-button>
         </div>
@@ -45,7 +45,7 @@ export default {
     Header,
   },
   methods: {
-    onSubmit() {
+    submit: function() {
       const formData = {
         firstName: this.firstName,
         lastName: this.lastName,

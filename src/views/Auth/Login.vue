@@ -1,20 +1,19 @@
 <template>
   <div id="login">
     <Header />
-
     <div class="login-form">
       <h2 class="title">Ready to Get Pharaoed?</h2>
       <form @submit.prevent="onSubmit">
         <div class="input">
-          <vs-input size="large" label="Email" placeholder="pharaoh@something.com" v-model="email" />
+          <vs-input size="large" label="Email" type="email" id="email" placeholder="pharaoh@something.com" v-model="email" />
         </div>
         <div class="input">
-          <vs-input size="large" label="Password" placeholder="" v-model="password" />
+          <vs-input size="large" label="Password" type="password" id="password" placeholder="" v-model="password" />
         </div>
         <div class="submit">
-          <vs-button color="#663695" type="relief">LOGIN</vs-button>
+          <vs-button type="relief" color="#663695" >LOGIN</vs-button>
           <br>
-          <vs-button to="/register" line-origin="left" color="warning" type="line">I do not have an account yet! Register</vs-button>
+          <vs-button to="register" line-origin="left" color="warning" type="line">I do not have an account yet! Register</vs-button>
         </div>
       </form>
     </div>
