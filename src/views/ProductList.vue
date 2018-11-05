@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 
   <main class="ph-h-section-first">
 
@@ -36,6 +37,8 @@
     <button @click="findMatchingApparel()">Find an outfit</button>
     <h3>Results below</h3>
 
+
+
     <h1>The clothes meant for you</h1>
     <vs-row vs-justify="flex-start" vs-align="center" vs-w="12" type="flex" class="product-list ph-overflow-scroll">
 
@@ -69,6 +72,7 @@ export default {
   data() {
     return {
       products: [],
+<<<<<<< HEAD
       baseUrls: [
         "https://successfulsigns.com/wp-content/uploads/2015/06/A-TB-G800_51_z1.png",
         "http://philippeperzi.com/assets/2013/07/Harvey-Specter6.png"
@@ -79,6 +83,8 @@ export default {
         minValue: 0.5
       },
       matchedProducts: []
+=======
+>>>>>>> e00527596fd6d5aecab4f3ea76b0c1bd50caaa5a
     };
   },
   computed: {},
@@ -172,7 +178,7 @@ export default {
 
 <style>
 .product-list {
-  height: 80vh;
+  height: 70vh;
 }
 .product-col {
   padding: 15px;
@@ -198,7 +204,7 @@ export default {
   text-align: center;
 }
 .ph-mt-2 {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .ph-ms-2 {

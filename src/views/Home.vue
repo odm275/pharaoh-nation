@@ -17,7 +17,7 @@
 
         <div class="button--wrapper">
           <br>
-          <vs-row vs-type="flex" vs-justify="center">
+          <vs-row vs-type="flex" vs-justify="center" v-if="!isAuthenticated">
             <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-lg="3" vs-sm="6" vs-xs="12">
               <vs-button color="warning" type="line" to="login">LOGIN</vs-button>
             </vs-col>
@@ -50,6 +50,11 @@ export default {
   components: {
     HelloWorld,
     HomeHeader,
+  },
+  computed: {
+    isAuthenticated() {
+      return this.$store.getters.isAuthenticated;
+    },
   },
 };
 </script>
