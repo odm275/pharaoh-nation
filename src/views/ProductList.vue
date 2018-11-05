@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
 
   <main class="ph-h-section-first">
 
@@ -72,7 +71,6 @@ export default {
   data() {
     return {
       products: [],
-<<<<<<< HEAD
       baseUrls: [
         "https://successfulsigns.com/wp-content/uploads/2015/06/A-TB-G800_51_z1.png",
         "http://philippeperzi.com/assets/2013/07/Harvey-Specter6.png"
@@ -83,8 +81,7 @@ export default {
         minValue: 0.5
       },
       matchedProducts: []
-=======
->>>>>>> e00527596fd6d5aecab4f3ea76b0c1bd50caaa5a
+
     };
   },
   computed: {},
